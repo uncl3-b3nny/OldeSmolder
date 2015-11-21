@@ -11,15 +11,15 @@ default: &default
 
 development:
   <<: *default
-  database: smoulder/development.mysql2
+  database: copy_of_junk_smoulder/development.mysql2
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: smoulder/test.mysql2
+  database: copy_of_junk_smoulder/test.mysql2
 
 production:
   <<: *default
-  database: smoulder/production.sqlite3
+  database: copy_of_junk_smoulder/production.sqlite3

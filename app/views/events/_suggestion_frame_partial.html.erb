@@ -4,7 +4,7 @@
         <section class="feature-text">
           <h1 class="section-title ">Pick 1!</h1>
 
-            <p> <%= Event.next_event.first.title %></p>
+            <p> <%= @next_event.title %></p>
        
         </section>
 
@@ -15,20 +15,27 @@
           <article class="feature-col col-md-4">
             <a href="" onclick="populate_and_open_modal(event, 'modal-content-6');" class="thumbnail linked">
               <div class="image-container">
-
-                <img data-img-src= <%= Suggestion.next_quality_time(current_user.id).first.suggestion_image_file_path %> class="lazy item-thumbnail" alt="Lorem Ipsum">
+                <img data-img-src= <%= @next_quality_time_suggestion.suggestion_image_file_path %> class="lazy item-thumbnail" alt="Lorem Ipsum">
 
               </div>
               <div class="caption">
-                <h5><%= Suggestion.next_quality_time(current_user.id).first.title %></h5>
+                <h5><%= @next_quality_time_suggestion.content_title %></h5>
                 
               </div><!-- .caption -->
 
               <!-- First Suggestions Button -->
                 <center>
-                  <%= link_to 'Do it', '', route_to: event_path(Event.next_event.first), event_title: Suggestion.next_quality_time(current_user.id).first.title, event_type: Suggestion.next_quality_time(current_user.id).first.category, category: Suggestion.next_quality_time(current_user.id).first.category, remote: :true, class: "update_event btn btn-primary btn-md" %>
+                  <%= link_to 'Do it', '', 
+                  route_to: event_path(@next_event),
+                  primary_category: @next_quality_time_suggestion.primary_category,
+                  suggestion_id: @next_quality_time_suggestion.id, 
+                  remote: :true, 
+                  class: "update_event btn btn-primary btn-md" %>
                 </center>
             </a><!-- .thumbnail -->
+            <br>
+            <br>
+            <br>
 
             <div class="content-to-populate-in-modal" id="modal-content-6">
               <h1>Nantahala National Forest</h1>
@@ -63,17 +70,22 @@
           <article class="feature-col col-md-4">
             <a href="" onclick="populate_and_open_modal(event, 'modal-content-7');" class="thumbnail linked">
               <div class="image-container">
-                <img data-img-src= <%= Suggestion.next_words_of_affirmation(current_user.id).first.suggestion_image_file_path %> class="lazy item-thumbnail" alt="Lorem Ipsum">
+                <img data-img-src= <%= @next_words_of_affirmation_suggestion.suggestion_image_file_path %> class="lazy item-thumbnail" alt="Lorem Ipsum">
               </div>
               <div class="caption">
-                <h5><%= Suggestion.next_words_of_affirmation(current_user.id).first.title %></h5>
+                <h5><%= @next_words_of_affirmation_suggestion.content_title %></h5>
               
                     
               </div><!-- .caption -->
+
               <!-- Second Suggestions Button -->
-                <center>
-                  <%= link_to 'Do it', '', route_to: event_path(Event.next_event.first), event_notes: Suggestion.next_words_of_affirmation(current_user.id).first.title, event_type: Suggestion.next_words_of_affirmation(current_user.id).first.category, category: Suggestion.next_words_of_affirmation(current_user.id).first.category, remote: :true, class: "update_event btn btn-primary btn-md" %>
-                </center>
+              <center>
+                <%= link_to 'Do it', '', 
+                route_to: event_path(@next_event),
+                primary_category: @next_words_of_affirmation_suggestion.primary_category,
+                suggestion_id: @next_words_of_affirmation_suggestion.id, 
+                remote: :true, class: "update_event cushion btn btn-primary btn-md" %>
+              </center>
             </a><!-- .thumbnail -->
 
             <div class="content-to-populate-in-modal" id="modal-content-7">

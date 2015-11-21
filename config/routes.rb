@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-# do i need to nest routes for user_suggestions?
   resources :events
 
   resources :suggestion

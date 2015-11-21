@@ -1,4 +1,4 @@
-class CreateSuggestion < ActiveRecord::Migration
+class CreateSuggestions < ActiveRecord::Migration
   def change
     create_table :suggestions do |t|
       t.integer :user_id
@@ -14,6 +14,7 @@ class CreateSuggestion < ActiveRecord::Migration
       t.string  :budget_size
       t.string  :suggestion_image_file_path
       t.string  :url
+      t.string  :workflow_state
 
       t.timestamps
     end

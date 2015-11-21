@@ -1,7 +1,7 @@
 == README
 
-This application is designed to help you do nice things for people you care about by leveraging the mountains of data that companies like google have collected from your loved ones. Essentially, it takes the effort out of being thoughtful.
+This application was my final project at the Iron Yard and boy did I learn a lot. It is designed to leverage big data to give married folks a quick and convenient way to make their spouse feel loved and cherished. This application was my final project at the Iron Yard, and is something I'd love to come back to one day. The primary technologies used were Ruby on Rails, HTML, HAML, & ERB, CSS, AJAX, and MySQL, and other tools included Jquery, Bootstrap, Tablesorter, and FullCalendar plug-ins.
 
-It is far from a finished product. I have only had time to build and style the basic functionality for this app. The code needs a great deal of clean-up, and I look forward to polishing it till it shines!
+It is far from a finished product. I only had time to build and style the basic functionality for this app. The code needs a great deal of clean-up, and I look forward to polishing it till it shines!
 
 If you'd like to try it out user randy@stamm.com as your log in and password14 as the password!
