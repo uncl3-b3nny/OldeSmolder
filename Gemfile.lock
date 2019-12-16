@@ -61,7 +61,7 @@ GEM
     dropbox-sdk (1.6.4)
       json
     erubis (2.7.0)
-    excon (0.39.5)
+    excon (0.71.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
